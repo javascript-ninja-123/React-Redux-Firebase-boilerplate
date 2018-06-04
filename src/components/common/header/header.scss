@@ -1,0 +1,46 @@
+@import '../../../css/main';
+
+
+/// i guess I messed up scss watch npm script
+//for the time being
+// I just wanna show you that you can use CSS3 built in variable feature
+//you can import scss file in scss just like how you import js file in .js
+
+.Header{
+  display: flex;
+  align-items: center;
+  //temporary background
+  //this is how you use css3 built-in variables  var()
+  background-color:var(--color-primary);
+  color:var(--color-primary-text);
+  justify-content: space-between;
+  padding:.5rem 1rem;
+  //fixed height
+  height:6rem;
+
+  .logo{
+    flex:0 0 60%;
+    &__text{
+      cursor:pointer;
+      font-size:1.7rem;
+    }
+  }
+
+  .list{
+    flex:1;
+    margin:0;
+    padding:0;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    &__item{
+      a{
+        font-size:1.4rem;
+        color:var(--color-primary-text);
+        &:hover{
+          text-decoration:none;
+        }
+      }
+    }
+  }
+}

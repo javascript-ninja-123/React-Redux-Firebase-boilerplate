@@ -5,7 +5,7 @@ import React,{Component} from 'react';
     render() {
         return (
             <div className="APP">
-                Hello World
+              
             </div>
         );
     }
