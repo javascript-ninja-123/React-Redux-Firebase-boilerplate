@@ -1,0 +1,35 @@
+
+
+//https://scotch.io/tutorials/how-to-use-sass-mixins
+
+
+//mixin is going to vertically and horizontally center an item
+@mixin flex-row-center-center($justify,$align){
+  display:flex;
+  //by default flex-direction is row
+  //flex-direction: row;
+  // $justify === true
+  @if ($justify){
+    justify-content: center;
+  }
+  @if ($align){
+    align-items:center
+  }
+}
+
+//https://codepen.io/sdthornton/pen/wBZdXq
+
+@mixin box-shadow($number){
+  @if $number == 1{
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  }
+  @if $number == 2 {
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  }
+  @if $number == 3 {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  }
+  @if $number == 4 {
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+  }
+}

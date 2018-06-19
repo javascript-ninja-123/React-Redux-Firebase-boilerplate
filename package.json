@@ -8,6 +8,7 @@
     }
   },
   "dependencies": {
+    "axios": "^0.18.0",
     "bootstrap": "^4.0.0",
     "firebase": "^5.0.4",
     "history": "^4.7.2",
@@ -25,6 +26,7 @@
     "react-test-renderer": "^16.0.0",
     "reactstrap": "^5.0.0-beta.2",
     "redux": "^3.7.2",
+    "redux-form": "^7.4.2",
     "redux-observable": "^1.0.0-beta.0",
     "redux-thunk": "^2.2.0",
     "rxjs": "^6.2.0",

@@ -1,89 +1,31 @@
 import React,{Component} from 'react';
-import {Link} from 'react-router-dom';
+import {NavLink} from 'react-router-dom';
 import './header.css';
+const Logo = 'https://upload.wikimedia.org/wikipedia/hr/2/24/Adidas_logo.png'
 
+//https://github.com/ReactTraining/react-router/blob/master/packages/react-router-dom/docs/api/NavLink.md
 
-// just let you know that, it is not necessary to use class
-//function for this header
-//however, we might be using some life cycle functions later
-//if it is just a UI component
-//then header could be like
+//BEM naming convention
+//For a better CSS naming
+//because we are using scss
 
-
-// const Header = () => (
-//   <div className="Header">
-//     <div className='logo'>
-//       <h3 className='logo__text'>Lorem</h3>
-//     </div>
-//     <ul className='list'>
-//       <li className='list__item'>
-//         <Link to='/'>lorem</Link>
-//       </li>
-//       <li className='list__item'>
-//         <Link to='/'>lorem</Link>
-//       </li>
-//       <li className="list__item">
-//         <Link to='/login'>Login</Link>
-//       </li>
-//     </ul>
-//   </div>
-// )
-//
-// //or
-//
-// const Header = () => {
-//   return (
-//     <div className="Header">
-//       <div className='logo'>
-//         <h3 className='logo__text'>Lorem</h3>
-//       </div>
-//       <ul className='list'>
-//         <li className='list__item'>
-//           <Link to='/'>lorem</Link>
-//         </li>
-//         <li className='list__item'>
-//           <Link to='/'>lorem</Link>
-//         </li>
-//         <li className="list__item">
-//           <Link to='/login'>Login</Link>
-//         </li>
-//       </ul>
-//     </div>
-//   )
-// }
-//
-// const exampleFunction = () => {
-//   return (
-//     <div></div>
-//   )
-// } is equal to
-//
-// cons exampleFunction = () => (
-//   <div></div>
-// )
-// // you do not need to write return :)
-
+const activeNavStyle = {color:"#004ba0"};
 
 class Header extends Component {
 
     render() {
         return (
-            <div className="Header">
-              <div className='logo'>
-                <h3 className='logo__text'>Lorem</h3>
+            <header className="Header">
+              <div className='Header__logo-wrapper'>
+                <img src={Logo} alt='logo' className="Header__logo"/>
               </div>
-              <ul className='list'>
-                <li className='list__item'>
-                  <Link to='/'>lorem</Link>
-                </li>
-                <li className='list__item'>
-                  <Link to='/'>lorem</Link>
-                </li>
-                <li className="list__item">
-                  <Link to='/login'>Login</Link>
-                </li>
-              </ul>
-            </div>
+              <nav className='Header__list'>
+                <NavLink to='/home' activeStyle={activeNavStyle}>Home</NavLink>
+                <NavLink to='/profile' activeStyle={activeNavStyle}>Profile</NavLink>
+                <NavLink to='/login' activeStyle={activeNavStyle}>Login</NavLink>
+                <NavLink to='/signup' activeStyle={activeNavStyle}>Sign Up</NavLink>
+              </nav>
+            </header>
         );
     }
 }

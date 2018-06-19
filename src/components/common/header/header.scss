@@ -7,40 +7,30 @@
 //you can import scss file in scss just like how you import js file in .js
 
 .Header{
-  display: flex;
-  align-items: center;
-  //temporary background
-  //this is how you use css3 built-in variables  var()
-  background-color:var(--color-primary);
-  color:var(--color-primary-text);
+  @include flex-row-center-center(false,true);
   justify-content: space-between;
-  padding:.5rem 1rem;
-  //fixed height
-  height:6rem;
-
-  .logo{
-    flex:0 0 60%;
-    &__text{
-      cursor:pointer;
-      font-size:1.7rem;
-    }
+  padding:0 2rem;
+  background-color:var(--color-primary);
+  @include box-shadow(3);
+  margin-bottom:2rem;
+  &__logo-wrapper{
+    flex:0 0 20%;
   }
-
-  .list{
+  &__logo{
+    width:5rem;
+    height:5rem;
+    object-fit: contain;
+  }
+  &__list{
     flex:1;
-    margin:0;
-    padding:0;
-    list-style: none;
-    display: flex;
-    justify-content: space-between;
-    &__item{
-      a{
-        font-size:1.4rem;
-        color:var(--color-primary-text);
-        &:hover{
-          text-decoration:none;
-        }
-      }
+    display:flex;
+    align-items: center;
+    justify-content: flex-end;
+    a{
+      font-size:$default-text;
+      text-decoration:none;
+      color:var(--color-primary-text);
+      padding:0 1rem;
     }
   }
 }

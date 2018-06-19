@@ -34,25 +34,24 @@ body {
 .Header {
   display: flex;
   align-items: center;
-  background-color: var(--color-primary);
-  color: var(--color-primary-text);
   justify-content: space-between;
-  padding: .5rem 1rem;
-  height: 6rem; }
-  .Header .logo {
-    flex: 0 0 60%; }
-    .Header .logo__text {
-      cursor: pointer;
-      font-size: 1.7rem; }
-  .Header .list {
+  padding: 0 2rem;
+  background-color: var(--color-primary);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  margin-bottom: 2rem; }
+  .Header__logo-wrapper {
+    flex: 0 0 20%; }
+  .Header__logo {
+    width: 5rem;
+    height: 5rem;
+    object-fit: contain; }
+  .Header__list {
     flex: 1;
-    margin: 0;
-    padding: 0;
-    list-style: none;
     display: flex;
-    justify-content: space-between; }
-    .Header .list__item a {
-      font-size: 1.4rem;
-      color: var(--color-primary-text); }
-      .Header .list__item a:hover {
-        text-decoration: none; }
+    align-items: center;
+    justify-content: flex-end; }
+    .Header__list a {
+      font-size: 1.2rem;
+      text-decoration: none;
+      color: var(--color-primary-text);
+      padding: 0 1rem; }
