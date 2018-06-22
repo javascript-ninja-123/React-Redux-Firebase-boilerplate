@@ -2,14 +2,26 @@ import React,{Component} from 'react';
 import { Field, reduxForm } from 'redux-form';
 import customInput from './field';
 import {validate, warn,asyncValidate} from './validation';
+import styled from 'styled-components';
 //https://redux-form.com/7.4.2/docs/gettingstarted.md/
+
+// https://www.styled-components.com/docs
+//styled component
+
+const flexWrapper = styled.div`
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  min-height:calc(100vh - 50px);
+`
+
 
 class AuthForm extends Component {
 
     render() {
        const { handleSubmit } = this.props;
         return (
-            <div className="AuthForm">
+            <flexWrapper className="AuthForm">
               <form onSubmit={handleSubmit}>
                 <div>
                   <div>
@@ -37,7 +49,7 @@ class AuthForm extends Component {
                   </button>
                 </div>
               </form>
-            </div>
+            </flexWrapper>
         );
     }
 }
